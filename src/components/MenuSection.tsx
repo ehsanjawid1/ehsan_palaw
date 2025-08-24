@@ -1,8 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import qabuliPalaw from '@/assets/qabuli-palaw.jpg';
-import kebab from '@/assets/kebab.jpg';
-import shamiKebab from '@/assets/shami-kebab.jpg';
 
 const menuItems = [
   {
@@ -10,7 +7,7 @@ const menuItems = [
     title: 'ماهیچه پلو مخصوص',
     description: '🥘 ماهیجه‌پلو مخصوص ما، بهترین انتخاب برای مهمانی و دسترخوان خانواده‌گی!',
     price: '400 افغانی',
-    image: qabuliPalaw,
+    image: 'https://i.postimg.cc/WpQT4K7s/image.jpg',
     category: 'main'
   },
   {
@@ -18,7 +15,7 @@ const menuItems = [
     title: 'کباب گوشت مخصوص',
     description: 'گوشت کوساله تازه با مساله مخصوص، به سیخ کشیده شده و روی ذغال پخته شده.',
     price: '170 افغانی',
-    image: kebab,
+    image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80',
     category: 'main'
   },
   {
@@ -26,7 +23,7 @@ const menuItems = [
     title: 'کباب شامی مخصوص',
     description: 'امروز نوبت کباب شامی داغ و خوش‌مزه است 🍢🔥 با گوشت تازه، پیاز و مساله اصیل وطنی 🇦🇫👌',
     price: '180 افغانی',
-    image: shamiKebab,
+    image: 'https://i.postimg.cc/28xDk59f/image.png',
     category: 'main'
   },
   {
@@ -34,7 +31,7 @@ const menuItems = [
     title: 'کباب مرغ مخصوص',
     description: 'مرغ تازه، مرینیت شده با مساله مخصوص وطنی 🇦🇫👌 روی آتش ذغال سرخ میشه، 😍',
     price: '200 افغانی',
-    image: kebab,
+    image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     category: 'main'
   },
   {
@@ -42,7 +39,7 @@ const menuItems = [
     title: 'فانتا',
     description: 'فانتا، شریک لحظه های دوستانه و مهمانی های شاد شماست..',
     price: '30 افغانی',
-    image: 'https://images.unsplash.com/photo-1581636625402-29b2a704ef13?w=400',
+    image: 'https://i.postimg.cc/LsZRpFqd/FANTA1.png',
     category: 'drink'
   },
   {
@@ -50,23 +47,31 @@ const menuItems = [
     title: 'پیپسی',
     description: 'نوشابه گازدار خنک پیپسی با طعم اصلی و منحصر به فرد.',
     price: '30 افغانی',
-    image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400',
+    image: 'https://images.unsplash.com/photo-1629203851122-3726ecdf080e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
     category: 'drink'
   },
   {
     id: 7,
-    title: 'آب معدنی',
-    description: 'آب معدنی خنک و گوارا در بطری.',
-    price: '10 افغانی',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400',
+    title: 'مائونتن دیو',
+    description: 'نوشابه گازدار خنک با طعم لیمو و مرکبات.',
+    price: '30 افغانی',
+    image: 'https://i.postimg.cc/mrFKKZ0M/dew.jpg',
     category: 'drink'
   },
   {
     id: 8,
+    title: 'آب معدنی',
+    description: 'آب معدنی خنک و گوارا در بطری.',
+    price: '10 افغانی',
+    image: 'https://i.postimg.cc/NjCftxpX/image.jpg',
+    category: 'drink'
+  },
+  {
+    id: 9,
     title: 'دوغ محلی',
     description: 'دوغ خنک و گازدار با طعم نعناع تازه، بهترین همراه برای غذاهای لذیذ ما.',
     price: '20 افغانی',
-    image: 'https://images.unsplash.com/photo-1553909489-cd47e0ef937f?w=400',
+    image: 'https://i.postimg.cc/1tByWcn4/DOGH1.jpg',
     category: 'drink'
   }
 ];
