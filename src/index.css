@@ -2,57 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Persian Restaurant Glassmorphism Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Glassmorphism Base Colors */
+    --background: 240 25% 5%;
+    --foreground: 30 50% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass Effect Colors */
+    --glass: 240 15% 10%;
+    --glass-light: 240 20% 20%;
+    --glass-border: 240 30% 25%;
+    
+    /* Restaurant Brand Colors */
+    --primary: 15 85% 55%; /* Warm orange-red */
+    --primary-foreground: 30 50% 95%;
+    --primary-glow: 15 100% 70%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --secondary: 240 15% 15%;
+    --secondary-foreground: 30 50% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --accent: 45 90% 60%; /* Golden */
+    --accent-foreground: 240 25% 5%;
+    --accent-glow: 45 100% 70%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Glass Surface Colors */
+    --card: 240 15% 8%;
+    --card-foreground: 30 50% 95%;
+    --card-glow: 240 30% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 10% 25%;
+    --muted-foreground: 240 15% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --popover: 240 15% 10%;
+    --popover-foreground: 30 50% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 30 50% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 25% 20%;
+    --input: 240 20% 12%;
+    --ring: 15 85% 55%;
 
-    --radius: 0.5rem;
+    /* Glass Effects */
+    --glass-bg: hsla(240, 15%, 10%, 0.6);
+    --glass-bg-light: hsla(240, 20%, 20%, 0.4);
+    --glass-border-color: hsla(240, 30%, 25%, 0.5);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(240, 20%, 20%, 0.6) 0%, hsla(240, 15%, 10%, 0.8) 100%);
+    --gradient-hero: linear-gradient(135deg, hsla(240, 25%, 5%, 0.9) 0%, hsla(15, 85%, 10%, 0.9) 100%);
+    
+    /* Shadows & Glows */
+    --shadow-glass: 0 8px 32px hsla(240, 25%, 5%, 0.4);
+    --shadow-glow: 0 0 30px hsla(var(--primary), 0.3);
+    --shadow-accent: 0 0 40px hsla(var(--accent), 0.2);
+    
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar (keeping existing) */
+    --sidebar-background: 240 15% 8%;
+    --sidebar-foreground: 30 50% 95%;
+    --sidebar-primary: 15 85% 55%;
+    --sidebar-primary-foreground: 30 50% 95%;
+    --sidebar-accent: 240 20% 15%;
+    --sidebar-accent-foreground: 30 50% 95%;
+    --sidebar-border: 240 25% 20%;
+    --sidebar-ring: 15 85% 55%;
   }
 
   .dark {
@@ -100,6 +120,38 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-vazir;
+    background: radial-gradient(ellipse at top, hsla(240, 25%, 8%, 1) 0%, hsla(240, 25%, 5%, 1) 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass morphism utilities */
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border-color);
+  }
+  
+  .glass-light {
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border-color);
+  }
+  
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-accent {
+    box-shadow: var(--shadow-accent);
+  }
+  
+  /* Persian font family */
+  .font-vazir {
+    font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
   }
 }
